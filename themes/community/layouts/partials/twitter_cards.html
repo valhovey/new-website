@@ -1,7 +1,7 @@
 {{- with .Params.image }}
 {{ $image := $.Resources.GetMatch . }}
 {{ with $image }}
-{{ $thumb := .Resize "1200x webp q85" }}
+{{ $thumb := .Resize "1200x jpg q85" }}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="{{ $thumb.Permalink }}" />
 <meta name="twitter:image:alt" content="{{ $.Title }}" />

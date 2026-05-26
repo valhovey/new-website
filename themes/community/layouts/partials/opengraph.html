@@ -6,7 +6,7 @@
 {{- with .Params.image }}
 {{ $image := $.Resources.GetMatch . }}
 {{ with $image }}
-  {{ $thumb := .Resize "1200x webp q85" }}
+  {{ $thumb := .Resize "1200x jpg q85" }}
 <meta property="og:image" content="{{ $thumb.Permalink }}" />
 <meta property="og:image:width" content="{{ $thumb.Width }}" />
 <meta property="og:image:height" content="{{ $thumb.Height }}" />
